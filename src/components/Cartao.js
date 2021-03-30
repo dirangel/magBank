@@ -1,90 +1,63 @@
 import React from 'react'
-import {Container, Row, Col, Card, Button, Image, CardDeck} from 'react-bootstrap';
+import {Container, Row, Col, Image,} from 'react-bootstrap';
 import cartao from '../assets/credit-card.jpg';
 import './Cartao.scss';
-import post1 from '../assets/post-1.jpg';
-import post2 from '../assets/post-2.jpg';
-import post3 from '../assets/post-3.jpg';
+// import post1 from '../assets/post-1.jpg';
+// import post2 from '../assets/post-2.jpg';
+// import post3 from '../assets/post-3.jpg';
 
-import posts from '../data/posts';
+// import posts from '../data/posts';
 
 const Cartao = () => (
   <section className="mr-auto">
   
   <Container className='my-5'>
    <Row>
-     <Col className="mr-auto">
-     <h1>Cartão de crédito</h1>
-     <div class="container">
-     <div class="row">
-       <div class="col-6 col-sm-4">
-         <i class="fas fa-credit-card"></i>
-         Crédito Pessoal
-       </div>
-       
-       <div class="col-6 col-sm-4">
-         <i class="fas fa-shopping-cart"></i>
-         Pagamento Online
-       </div>
+     
+     <Col xs={12} lg={7} className='mb-5 mb-lg-0 px-5 px-lg-0'>
+      <Row>
+        <h2 className='display-4 my-4'>Cartão de crédito</h2>
+      </Row>
+      
+      <Row>
+        <Col xs={12} lg={6} className='mb-4'>
+          <Row>
+            {/* className='d-flex justify-content-center' */}
+            <Col xs={2}> <i class="fas fa-credit-card"> </i></Col>
+            <Col xs={10} className='h5 text-muted p-0'>Crédito Pessoal</Col>
+          </Row>
+        </Col>
 
-       <div class="w-100"></div>
+        <Col xs={12} lg={6} className='mb-4'>
+           <Row>
+            <Col xs={2}> <i class="fas fa-shopping-cart"></i> </Col>
+            <Col xs={10} className='h5 text-muted p-0'>Pagamento Online</Col>
+          </Row>
+        </Col>          
 
-      <div class="col-6 col-sm-4">
-        <i class="fas fa-mobile"></i>
-        APP</div>
-      <div class="col-6 col-sm-4">
-        <i class="fas fa-wallet"></i>
-        Carteira Digital</div>
-       </div>
-      </div>
+         <Col xs={12} lg={6} className='mb-4'>
+           <Row>
+            <Col xs={2}> <i class="fas fa-mobile"></i> </Col>
+            <Col xs={10} className='h5 text-muted p-0'>APP</Col>
+          </Row>
+        </Col>  
+
+         <Col xs={12} lg={6} className='mb-4'>
+           <Row>
+            <Col xs={2}> <i class="fas fa-wallet"></i> </Col>
+            <Col xs={10} className='h5 text-muted p-0'>Carteira Digital</Col>
+          </Row>
+        </Col> 
+
+      </Row>
      </Col>
      
-     <Col>
-       <Image src={cartao}/>
+     <Col xs={12} lg={5}>
+       <Image src={cartao} alt='Magbank' fluid/>
      </Col>
    </Row>
+
   </Container>
-
-  <CardDeck className='my-5'>
-  <Card>
-    <Card.Img variant="top" src={post1} />
-    <Card.Body>
-      <Card.Title>Lorem ipsum dolor sit</Card.Title>
-      <Card.Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Card.Text>
-      <Button variant="danger">Peça já</Button>
-    </Card.Body>    
-  </Card>
-  <Card>
-    <Card.Img variant="top" src={post2} />
-    <Card.Body>
-      <Card.Title>Phasellus aget elementum diam</Card.Title>
-      <Card.Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Card.Text>
-      <Button variant="danger">Peça já</Button>
-    </Card.Body>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src={post3} />
-    <Card.Body>
-      <Card.Title>Fusce tempus</Card.Title>
-      <Card.Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Card.Text>
-      <Button variant="danger">Peça já</Button>
-    </Card.Body>
-  </Card>
-</CardDeck>
-
-<Row>
-    <Col md={{ span: 6, offset: 6 }}>
-       <Button variant="success">Abra sua conta</Button>
-    </Col>
-</Row>
-
-  
 </section>
 )
 
